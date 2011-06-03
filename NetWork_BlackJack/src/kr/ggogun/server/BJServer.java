@@ -40,6 +40,7 @@ public class BJServer extends Thread {
 					System.out.println(userList.size() + "add : "+socket);
 					pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 					pw.println("Connect Server!!!");
+					// Adding New Socket
 					pw.flush();
 					
 					
@@ -74,6 +75,7 @@ public class BJServer extends Thread {
 		
 	}
 	
+	// Ping Thread
 	public class TimerPing extends TimerTask {
 		
 	    public void run() {
@@ -83,6 +85,7 @@ public class BJServer extends Thread {
 					pw = new PrintWriter(new OutputStreamWriter(s.getOutputStream()));
 					
 					if(!delUserList.contains(s)){
+						// Send Ping Msg all User
 						pw.println("ping " + userList.indexOf(s) + "user ");
 						pw.flush();
 					}
@@ -99,19 +102,22 @@ public class BJServer extends Thread {
 	    	    }
 	}
 	
-	
+	// Send All user To msg
 	public void printMsg(String msg){
+		
 		PrintWriter printer;
 		
 		for(Socket s:userList){
+		// iterator All the userList
 	    	
 	    		
 			try {	
-				
+				// Make Output Stream
 	    		printer = new PrintWriter(new OutputStreamWriter(s.getOutputStream()));
 				
 				printer.println(msg);
 				printer.flush();
+				// Print all user to msg
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -121,9 +127,11 @@ public class BJServer extends Thread {
 		
 	}
 	
+	// ChatReciver Thread 
 	public class ChatReciever extends Thread{ 
 
 		Socket socket;
+		// To using Multi Thread
 		public ChatReciever(Socket socket){
 			this.socket = socket;
 		}
@@ -146,17 +154,17 @@ public class BJServer extends Thread {
 				
 				
 				try {
-					
+					// Make Socket Input Stream
 					BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 					String temp = br.readLine();
 					if(temp.contains(">") && temp.split("> ")[1].equals("exit")){
 						// Recieve DisConnect Msg
 						
 						int port = Integer.parseInt(temp.split("> ")[0]);
+						
 						// Split Port Check LocalPort  m
 						// cause This Game Test Only One Compuer
 						// Must Change Checking IP Address
-						
 						for(Socket s:userList){
 							if(s.getPort() == port){
 								
@@ -170,7 +178,7 @@ public class BJServer extends Thread {
 						
 						System.out.println(temp);
 						printMsg(temp);
-						// Print Recieved Msg
+						// Print Recieved all the Msg
 						
 					}
 					
@@ -188,7 +196,7 @@ public class BJServer extends Thread {
 					
 					// if userList is Null Or Size 0, Not Print userList's size
 					if(userList.size()!=0)
-						System.out.println("duser Size is " + userList.size());
+						System.out.println("user Size is " + userList.size());
 					
 					
 				} catch (IOException e) {

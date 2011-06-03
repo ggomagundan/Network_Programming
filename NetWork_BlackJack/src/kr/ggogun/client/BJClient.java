@@ -21,8 +21,9 @@ public class BJClient extends Thread {
 		try {
 			
 			socket = new Socket("117.17.158.171",9955);
-			
+			// Connect Server To Socket 9955 Port
 				
+			// run Main Thread
 			Thread thread = new Thread(this);
 			thread.start();
 			
@@ -48,6 +49,7 @@ public class BJClient extends Thread {
 	    	try {
 				PrintWriter pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 				
+				// Send Exit Msg And Exit Program
 				pw.println("exit " + socket.getLocalPort());
 				pw.flush();
 				
@@ -63,11 +65,13 @@ public class BJClient extends Thread {
 	    }
 	}
 
+	// Client Chat Threads
 	public class ClientChat extends Thread {
 		
 		
 	    public void run() {
 	    	System.out.println("IN the chat");
+	    	// Make Console Reader
 	    	BufferedReader talk = new BufferedReader(new InputStreamReader(System.in));
 	    	PrintWriter sender = null;
 	    	while(true){
@@ -75,7 +79,9 @@ public class BJClient extends Thread {
 	    		try {
 					
 					sender = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
+					// Read the Console Msg
 					String msg = talk.readLine();
+					// Send Msg To Server
 					sender.println(socket.getLocalPort() + "> " + msg);
 					sender.flush();
 					
@@ -91,18 +97,20 @@ public class BJClient extends Thread {
 	}
 
 	
-	
+	// Main Thread
 	public void run(){
 		
 		PrintWriter pw;
 	/*	
+	 * 	// Test Exit Msg
 		TimerPing ping = new TimerPing();
 		Timer userPing = new Timer();
 		int time=(int)(Math.random()*30)*1000+5000;
 		System.out.println("time is" + time/1000);
 		userPing.schedule(ping, time);
 	*/	
-		new ClientChat().start(); 
+		new ClientChat().start();
+		// Start Client Chat Send Msg
 		
 		while(true){
 			
@@ -112,12 +120,15 @@ public class BJClient extends Thread {
 				pw = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 				
 				String temp = br.readLine();
+				// Recieve the Msg
+			
 			
 				if(temp.substring(0, 4).equals("ping")){
-				//	System.out.println(socket.getLocalPort());
+				// Check Response Ping Msg And Send Ping Msg
 					pw.println("ping live" + socket.getLocalPort());
 					pw.flush();
 				}else{
+					// Print Recieve Msg
 					System.out.println(temp);
 				}
 			

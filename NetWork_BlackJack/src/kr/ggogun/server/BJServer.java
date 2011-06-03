@@ -149,10 +149,10 @@ public class BJServer extends Thread {
 					
 					BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 					String temp = br.readLine();
-					if(temp.substring(0, 4).equals("exit")){
+					if(temp.contains(">") && temp.split("> ")[1].equals("exit")){
 						// Recieve DisConnect Msg
 						
-						int port = Integer.parseInt(temp.split(" ")[1]);
+						int port = Integer.parseInt(temp.split("> ")[0]);
 						// Split Port Check LocalPort  m
 						// cause This Game Test Only One Compuer
 						// Must Change Checking IP Address

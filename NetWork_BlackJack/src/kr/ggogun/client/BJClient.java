@@ -117,6 +117,8 @@ public class BJClient extends Thread {
 				//	System.out.println(socket.getLocalPort());
 					pw.println("ping live" + socket.getLocalPort());
 					pw.flush();
+				}else{
+					System.out.println(temp);
 				}
 			
 				

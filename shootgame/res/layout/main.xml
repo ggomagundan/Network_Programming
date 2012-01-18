@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+ 	android:id="@+id/title"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="@string/hello"
+    />
+    <Button
+    android:text="GameStart"
+    android:id="@+id/GameStart"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    </Button>
+
+
+
+<AbsoluteLayout 
+android:id="@+id/GameScreen" 
+android:layout_width="wrap_content" 
+android:layout_height="wrap_content">
+
+<pack.ggogun.view.AirCraftView
+		android:id="@+id/ivAirCraft"
+		android:src="@drawable/aircraft"
+		android:layout_x="-300dip"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+	/>
+	
+	 <pack.ggogun.view.MissileView 
+		android:id="@+id/ivMissile"
+		android:src="@drawable/missile"
+		android:layout_x="-300dip"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+	/>
+
+
+		
+
+
+
+
+
+</AbsoluteLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="kr.sprout.android"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name=".Sprout_testActivity"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+<receiver android:name=".C2dm_BroadcastReceiver"
+       android:permission="com.google.android.c2dm.permission.SEND"> 
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+<category android:name="test.android.test"/>
+</intent-filter>
+<intent-filter>
+<action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+<category android:name="test.android.test"/>
+</intent-filter>
+    </receiver>
+
+
+    </application>
+    
+    <permission android:name="test.android.test.permission.C2D_MESSAGE"
+     android:protectionLevel="signature"/>
+    
+    <uses-permission android:name="test.android.test.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

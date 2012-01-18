@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <string name="app_name">RuiGiNo_Layout</string>
+ <string name="layout">
+  \n
+  <b>
+   <font size="15">Layout</font>
+  </b>\n\n
+
+  The most common way to define your layout and express the view
+  hierarchy
+  is with an XML layout file. XML offers a human-readable
+  structure for
+  the layout, much like HTML. Each element in XML is either
+  a View or
+  ViewGroup object (or descendent thereof). View objects are
+  leaves in
+  the tree, ViewGroup objects are branches in the tree (see the
+  View
+  Hierarchy figure above).\n\n
+
+  The name of an XML element is respective
+  to the Java class that it
+  represents. So a
+  <i>&lt;TextView&gt;</i>
+  element creates a TextView in your UI, and a
+  <i>&lt;LinearLayout&gt;</i>
+  element creates a LinearLayout view group. When you load a layout
+  resource, the Android system initializes these run-time objects,
+  corresponding to the elements in your layout.\n\n
+
+  For example, a simple vertical layout with a text view and a button
+  looks like this:
+  the Activity base class.
+  Notice that the LinearLayout element contains both the TextView and the
+  Button. You can nest another LinearLayout (or other type of view
+  group) inside here, to lengthen the view hierarchy and create a more
+  complex layout.\n\n
+
+  For more on building a UI layout, read Declaring Layout.
+  \n\n
+ </string>
+</resources>
+

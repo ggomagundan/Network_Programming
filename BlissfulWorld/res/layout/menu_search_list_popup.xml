@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:padding="10pt" android:background="@drawable/list_popup_background"
+	android:orientation="vertical" android:id="@+id/menu_search_list_Popup_LinearLayout">
+	
+	<ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:id="@+id/menu_search_list_Popup_scrollView">
+		<TableLayout android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/pupup_tableLayout">
+			<TableRow>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView1" android:layout_height="match_parent" android:text="제목"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView2" android:text=" : " android:layout_height="match_parent"></TextView>
+				<TextView android:maxWidth="70dip" android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView3" android:text="내용" android:layout_height="match_parent"></TextView>				
+			</TableRow>
+			
+			<TableRow>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView4" android:layout_height="match_parent" android:text="작성자"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView5" android:text=" : " android:layout_height="match_parent"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView6" android:text="내용" android:layout_height="match_parent"></TextView>				
+			</TableRow>
+			
+			<TableRow>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView7" android:layout_height="match_parent" android:text="추천수"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView8" android:text=" : " android:layout_height="match_parent"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView9" android:text="내용" android:layout_height="match_parent"></TextView>				
+			</TableRow>
+			
+			<TableRow>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView10" android:layout_height="match_parent" android:text="반대수"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView11" android:text=" : " android:layout_height="match_parent"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView12" android:text="내용" android:layout_height="match_parent"></TextView>				
+			</TableRow>
+			
+			<TableRow>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView13" android:layout_height="match_parent" android:text="세부내용"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView14" android:text=" : " android:layout_height="match_parent"></TextView>
+				<TextView android:textColor="#000000" android:layout_width="match_parent" android:id="@+id/popup_textView15" android:text="내용" android:layout_height="match_parent"></TextView>				
+			</TableRow>			
+		</TableLayout>			
+	</ScrollView>
+	<ImageView android:layout_weight="1"  android:layout_gravity="center" android:layout_width="100dp" android:layout_height="100dp" android:id="@+id/menu_search_list_Popup_ImageView"></ImageView>
+	
+	<LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent"
+		android:orientation="horizontal" android:gravity="right" android:id="@+id/menu_search_list_Popup_Bottom_linearLayout">
+		<Button android:layout_height="wrap_content" android:text=""
+			android:layout_width="wrap_content" android:background="@drawable/plusicon" android:textStyle="bold" android:id="@+id/menu_search_list_Popup_Plus_button"></Button>
+		<Button android:layout_height="wrap_content" android:text=""
+			android:layout_width="wrap_content" android:background="@drawable/minusicon" android:textStyle="bold" android:id="@+id/menu_search_list_Popup_Minus_button"></Button>
+		<Button android:layout_height="wrap_content" android:text=""
+			android:layout_width="wrap_content" android:background="@drawable/closeicon" android:textStyle="bold" android:id="@+id/menu_search_list_Popup_Exit_button"></Button>
+	</LinearLayout>
+</LinearLayout>

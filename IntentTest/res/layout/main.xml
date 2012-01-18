@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   	android:background="@drawable/bg1"
+    >
+    <EditText 
+	    android:id="@+id/editText1" 
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+	   >
+    </EditText>
+	<SeekBar 
+		android:layout_height="wrap_content" 
+		android:id="@+id/SBar" 
+		android:layout_width="match_parent">
+	</SeekBar>
+
+	<Spinner 
+		android:layout_height="wrap_content" 
+		android:id="@+id/spin" 
+		android:layout_width="match_parent">
+	</Spinner>
+	<RadioGroup android:id="@+id/RGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal"
+	>
+		<RadioButton 
+			android:id="@+id/r1" 
+			android:layout_height="wrap_content" 
+			android:text="1" 
+			android:textColor="#000000"
+			android:layout_width="wrap_content" 
+			android:checked="true">
+		</RadioButton>
+		<RadioButton 
+			android:id="@+id/r2" 
+			android:layout_height="wrap_content" 
+			android:text="2" 
+			android:textColor="#000000"
+			android:layout_width="wrap_content">
+		</RadioButton>
+		<RadioButton 
+			android:id="@+id/r3" 
+			android:layout_height="wrap_content" 
+			android:text="3" 
+			android:textColor="#000000"
+			android:layout_width="wrap_content">
+		</RadioButton>
+	</RadioGroup>
+	<Button 
+		android:text="Sending" 
+		android:id="@+id/sendBtn" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+	</Button>
+    
+    <TextView
+    	android:textColor="#000000"
+    	android:id="@+id/result"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	>
+   	</TextView>
+   
+   
+   <RelativeLayout  
+   		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+   
+	<ImageView
+    android:id="@+id/Image1"
+    android:src="@drawable/banner"
+    android:clickable="true"
+    
+    android:layout_alignParentBottom="true"
+ 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+    </ImageView>
+    
+   </RelativeLayout>  
+   
+    
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:background="@drawable/background" android:id="@+id/ID_LinearLayout">
+    <TextView android:background="#2200F0F0" android:textColor="#000000" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/ID_TextView" android:text="아이디를 입력하세요" android:layout_marginTop="30dp" android:layout_width="match_parent" android:gravity="center" android:layout_marginBottom="10dp"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/ID_EditText" android:singleLine="true" android:layout_marginLeft="15dp" android:layout_marginRight="15dp">
+        <requestFocus></requestFocus>
+    </EditText>
+    <TextView android:background="#2200F0F0" android:textColor="#000000" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="match_parent" android:gravity="center" android:layout_marginTop="20dp" android:text="비밀번호를 입력하세요" android:layout_marginBottom="10dp" android:id="@+id/PW_TextView"></TextView>
+    <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:inputType="textPassword" android:id="@+id/PW_EditText" android:layout_marginBottom="30dp" android:singleLine="true" android:layout_marginLeft="15dp" android:layout_marginRight="15dp"></EditText>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:text="로그인" android:id="@+id/Login_Button" android:layout_marginBottom="30dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp"></Button>
+    <TextView android:background="#2200F0F0" android:textColor="#000000" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:text="아직 회원이 아니시라면" android:id="@+id/Inform_TextView" android:layout_marginBottom="10dp" android:layout_width="match_parent" android:gravity="center"></TextView>
+    <Button android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/Join_Button" android:text="가입하기" android:layout_marginLeft="15dp" android:layout_marginRight="15dp"></Button>
+    
+</LinearLayout>

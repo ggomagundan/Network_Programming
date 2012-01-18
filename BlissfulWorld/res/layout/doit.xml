@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:id="@+id/Doit_RelativeLayout" android:background="@drawable/background">
+    <Button android:background="#66008080" android:text="일반선행" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_marginLeft="50dp" android:layout_marginTop="80dp" android:id="@+id/Nomal_Do_Button" android:layout_height="100dp" android:layout_width="100dp"></Button>
+    <LinearLayout android:layout_height="30dp" android:layout_width="match_parent" android:id="@+id/Tab_LinearLayout" android:gravity="center|bottom" android:layout_alignParentTop="true" android:layout_alignParentLeft="true">
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/MyPage_Button" android:textColor="#008080" android:layout_weight="1" android:text="My Page" android:background="#7FFFD4"></Button>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/WritingList_Button" android:textColor="#008080" android:layout_weight="1" android:text="Writing List" android:background="#7FFFD4"></Button>
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Do_Button" android:textColor="#008080" android:layout_weight="1" android:text="Do It !!!" android:background="#7FFFD4"></Button>
+    </LinearLayout>
+    <Button android:id="@+id/Pyramid_Do_Button" android:text="Pyramid" android:background="#66008080" android:layout_alignBaseline="@+id/Relay_Do_Button" android:layout_alignBottom="@+id/Relay_Do_Button" android:layout_alignLeft="@+id/Special_Do_Button" android:layout_width="100dp" android:layout_height="100dp"></Button>
+    <Button android:layout_height="100dp" android:layout_width="100dp" android:id="@+id/Special_Do_Button" android:text="특수선행" android:background="#66008080" android:layout_alignBaseline="@+id/Nomal_Do_Button" android:layout_alignBottom="@+id/Nomal_Do_Button" android:layout_toRightOf="@+id/Nomal_Do_Button" android:layout_marginLeft="20dp"></Button>
+    <Button android:layout_height="100dp" android:layout_width="100dp" android:id="@+id/Relay_Do_Button" android:text="Relay" android:background="#66008080" android:layout_below="@+id/Nomal_Do_Button" android:layout_toLeftOf="@+id/Special_Do_Button" android:layout_marginTop="20dp"></Button>
+    <TextView android:layout_height="wrap_content" android:layout_width="match_parent" android:ellipsize="marquee" android:id="@+id/Bottom_Banner_TextView" android:textColor="#0066FF" android:textAppearance="?android:attr/textAppearanceMedium" android:singleLine="true" android:text="(광고) IBM SmarterPlanet Contest 발표는 09/30" android:background="#44444444" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"></TextView>
+    <TextView android:layout_height="250dp" android:layout_width="250dp" android:id="@+id/BackGround_TextView" android:background="#2200F0F0" android:layout_below="@+id/Tab_LinearLayout" android:layout_centerHorizontal="true" android:layout_marginTop="36dp"></TextView>
+    <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:src="@drawable/smarterplanet" android:layout_above="@+id/Bottom_Banner_TextView" android:layout_alignParentLeft="true" android:id="@+id/IBM_ImageView" android:layout_margin="20dp"></ImageView>
+    
+</RelativeLayout>

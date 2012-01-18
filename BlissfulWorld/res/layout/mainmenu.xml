@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:background="@drawable/background" android:id="@+id/MainMenu_RelativeLayout">
+    <TextView android:background="#44444444" android:textColor="#0066FF" android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_alignParentBottom="true" android:layout_alignParentLeft="true" android:id="@+id/Bottom_Banner_TextView" android:layout_width="match_parent" android:text="(광고) IBM SmarterPlanet Contest 발표는 09/30" android:singleLine="true" android:ellipsize="marquee"></TextView>
+    <LinearLayout android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:layout_width="match_parent" android:id="@+id/Tab_LinearLayout" android:layout_height="30dp" android:gravity="center|bottom">
+        <Button android:textColor="#008080" android:background="#7FFFD4" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/MyPage_Button" android:text="My Page"></Button>
+        <Button android:textColor="#008080" android:background="#7FFFD4" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/WritingList_Button" android:text="Writing List"></Button>
+        <Button android:textColor="#008080" android:background="#7FFFD4" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Do_Button" android:text="Do It !!!"></Button>
+    </LinearLayout>
+    <Button android:background="#66FEFE23" android:id="@+id/Inventory_Button" android:text="내 아이템" android:layout_below="@+id/Plant_Button" android:layout_centerHorizontal="true" android:layout_width="match_parent" android:layout_margin="10dp" android:layout_height="50dp"></Button>
+    <Button android:background="#66FEFE23" android:id="@+id/Friend_Button" android:text="친구 목록" android:layout_width="match_parent" android:layout_below="@+id/Inventory_Button" android:layout_alignParentLeft="true" android:layout_margin="10dp" android:layout_height="50dp"></Button>
+    <Button android:background="#66FEFE23" android:id="@+id/MyPoint_Button" android:text="Point" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_above="@+id/Bottom_Banner_TextView" android:layout_alignParentLeft="true" android:layout_marginBottom="16dp" android:layout_margin="10dp" android:layout_height="50dp"></Button>
+    <Button android:background="#66FEFE23" android:id="@+id/Plant_Button" android:layout_margin="10dp" android:text="Plant" android:layout_width="match_parent" android:layout_below="@+id/Shop_Button" android:layout_alignParentRight="true" android:layout_marginTop="30dp" android:layout_height="50dp"></Button>
+    <Button android:background="#66FEFE23" android:id="@+id/Shop_Button" android:layout_margin="10dp" android:text="Shop" android:layout_width="match_parent" android:layout_below="@+id/Tab_LinearLayout" android:layout_alignParentLeft="true" android:layout_marginTop="180dp" android:layout_height="50dp"></Button>
+    
+</RelativeLayout>

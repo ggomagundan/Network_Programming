@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="match_parent"
+  android:background="#22222222" android:id="@+id/WritingList_Item_LinearLayout" android:gravity="center" android:layout_height="40dp">
+    <TextView android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:id="@+id/Number_TextView" android:gravity="center" android:text="00" android:layout_width="30dp"></TextView>
+    <TextView android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="1" android:id="@+id/Subject_TextView" android:text="Subject" android:singleLine="true"></TextView>
+    <TextView android:background="#000000" android:textColor="#FFFFFF" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Pyramid_TextView" android:text="P" android:visibility="gone"></TextView>
+    <TextView android:background="#000000" android:textColor="#FFFFFF" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Relay_TextView" android:text="R" android:visibility="gone"></TextView>
+    <LinearLayout android:layout_height="match_parent" android:layout_width="wrap_content" android:orientation="vertical" android:layout_marginLeft="10dp" android:id="@+id/Right_LinearLayout">
+        <TextView android:textColor="#000000" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Date_TextView" android:text="11/08/31"></TextView>
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/GB_LinearLayout">
+            <ImageView android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:src="@drawable/vote_yes" android:id="@+id/Good_ImageView"></ImageView>
+            <TextView android:textColor="#0000FF" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Good_TextView" android:text="0" android:layout_weight="1" android:gravity="center"></TextView>
+            <ImageView android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:src="@drawable/vote_no" android:id="@+id/Bad_ImageView"></ImageView>
+            <TextView android:textColor="#FF0000" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/Bad_TextView" android:gravity="center" android:layout_weight="1" android:text="0"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

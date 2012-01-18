@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" android:id="@+id/WritingList_LinearLayout" android:background="@drawable/background">
+    <LinearLayout android:layout_width="match_parent" android:id="@+id/Tab_LinearLayout" android:layout_height="30dp" android:gravity="center|bottom">
+        <Button android:textColor="#008080" android:background="#7FFFD4" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/MyPage_Button" android:text="My Page"></Button>
+        <Button android:textColor="#008080" android:background="#7FFFD4" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/WritingList_Button" android:text="Writing List"></Button>
+        <Button android:textColor="#008080" android:background="#7FFFD4" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/Do_Button" android:text="Do It !!!"></Button>
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/WritingList_FrameLayout" android:layout_marginTop="15dp">
+        <ListView android:layout_height="match_parent" android:layout_width="match_parent" android:id="@+id/WritingList_ListView" android:visibility="invisible" android:cacheColorHint="#00000000"></ListView>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:id="@+id/WritingList_Network_LinearLayout" android:gravity="center">
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:id="@+id/Network_TextView" android:text="Loading..." android:textColor="#000000" android:gravity="center" android:background="#6600F0F0" android:padding="15dp"></TextView>
+            <ProgressBar style="?android:attr/progressBarStyleLarge" android:layout_height="wrap_content" android:layout_width="wrap_content" android:background="#6600F0F0" android:layout_margin="10dp" android:id="@+id/Network_ProgressBar" android:padding="25dp"></ProgressBar>
+        </LinearLayout>
+    </FrameLayout>
+    
+</LinearLayout>

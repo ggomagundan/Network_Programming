@@ -19,8 +19,8 @@ public class Todolist {
 		_DB.execSQL("Create Table IF NOT EXISTS Todolist (Title varchar)");
 		adapter = new SimpleAdapter(
 				_Act1, _Data, android.R.layout.simple_list_item_2, 
-				new String[]( "Title", "Title" ), 
-				new int[]( android.R.id.text1, android.R.id.text2 )
+				new String[]{ "Title", "Title" }, 
+				new int[]{ android.R.id.text1, android.R.id.text2 }
 				);
 				
 		

@@ -71,7 +71,7 @@ public class TutorialLayer extends CCLayer{
 			background.setOpacity(0);
 		}
 		checkButtonVisible();
-		CCDirector.sharedDirector().popScene();
+		GameManager.getGame().backScene();
 	}
 	
 	public void preCallback(Object sender){

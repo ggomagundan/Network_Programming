@@ -1,6 +1,7 @@
 package kr.ggogun.gamebasic.constants;
 
 import org.cocos2d.nodes.CCDirector;
+import org.cocos2d.opengl.CCTexture2D;
 import org.cocos2d.types.CGSize;
 
 public class BasicConstants {
@@ -34,6 +35,11 @@ public class BasicConstants {
 	
 	public final static String GAME_BACKGROUND_IMG = "img/game/game_background.png";
 	
+	public final static String DIFFICULTY_BACKGROUND_IMG = "img/game/difficulty_background.png";
+	public final static String DIFFICULTY_EASY_IMG = "img/game/easy.png";
+	public final static String DIFFICULTY_NORMAL_IMG = "img/game/normal.png";
+	public final static String DIFFICULTY_HARD_IMG = "img/game/hard.png";
+	
 	
 	public final static String[] TUTORIAL_IMG_LIST = 
 		{
@@ -46,6 +52,8 @@ public class BasicConstants {
 	
 	
 	public final static String STORY_BACKGROUND_IMG = "img/story/story_background.png";
+
+	
 
 }
 

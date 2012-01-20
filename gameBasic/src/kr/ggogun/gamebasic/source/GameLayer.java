@@ -40,8 +40,7 @@ public class GameLayer extends CCLayer {
 	
 	public void backCallback(Object sender){
 		
-		Log.d("PBS","pop");
-		CCDirector.sharedDirector().popScene();
+		GameManager.getGame().backScene();
 	}
 
 }

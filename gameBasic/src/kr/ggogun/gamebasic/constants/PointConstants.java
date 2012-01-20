@@ -23,6 +23,12 @@ public class PointConstants {
 			BasicConstants.HEIGHT_GAP+ CCSprite.sprite(BasicConstants.PRE_BUTTON_IMG).getTexture().getHeight()/2);
 	public static final CGPoint NEXT_BUTTON_POSITION = CGPoint.make(BasicConstants.WIDTH_GAP +BasicConstants.GAME_WIDTH - CCSprite.sprite(BasicConstants.NEXT_BUTTON_IMG).getTexture().getWidth()/2,
 			BasicConstants.HEIGHT_GAP+ CCSprite.sprite(BasicConstants.NEXT_BUTTON_IMG).getTexture().getHeight()/2);
+
+	public static final CGPoint EASY_BUTTON_POSITION = CGPoint.make(BasicConstants.DISPLAY_WIDTH/2,BasicConstants.DISPLAY_HEIGHT/12*7);
+
+	public static final CGPoint NORMAL_BUTTON_POSITION = CGPoint.make(BasicConstants.DISPLAY_WIDTH/2,BasicConstants.DISPLAY_HEIGHT/12*5);
+
+	public static final CGPoint HARD_BUTTON_POSITION = CGPoint.make(BasicConstants.DISPLAY_WIDTH/2,BasicConstants.DISPLAY_HEIGHT/12*3);
 	
 	
 	

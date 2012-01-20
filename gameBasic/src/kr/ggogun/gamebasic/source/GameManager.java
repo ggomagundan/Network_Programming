@@ -16,11 +16,13 @@ public class GameManager {
 	private CCScene gameScene;
 	private CCScene storyScene;
 	private CCScene tutorialScene;
+	private CCScene difficultyScene;
 
 	private MenuLayer mainLayer;
 	private GameLayer gameLayer;
 	private StoryLayer storyLayer;
 	private TutorialLayer tutorialLayer;
+	private GameDifficultyLayer difficultyLayer;
 	
 	
 	public static GameManager getGame() {
@@ -46,12 +48,13 @@ public class GameManager {
 		gameScene = CCScene.node();
 		storyScene = CCScene.node();
 		tutorialScene = CCScene.node();
+		difficultyScene = CCScene.node();
 		
 		mainLayer = new MenuLayer();
 		gameLayer = new GameLayer();
 		storyLayer = new StoryLayer();
 		tutorialLayer = new TutorialLayer();
-
+		difficultyLayer =  new GameDifficultyLayer();
 		
 		mainScene.setScale(BasicConstants.scale);
 		//gameLayer.setScale(BasicConstants.scale);
@@ -62,7 +65,7 @@ public class GameManager {
 		gameScene.addChild(gameLayer);
 		storyScene.addChild(storyLayer);
 		tutorialScene.addChild(tutorialLayer);
-		
+		difficultyScene.addChild(difficultyLayer);
 		
 	}
 
@@ -78,11 +81,28 @@ public class GameManager {
 			CCDirector.sharedDirector().replaceScene(storyScene);
 		}else if(sceneName.equals("tutorial")){
 			CCDirector.sharedDirector().replaceScene(tutorialScene);
+		}else if(sceneName.equals("difficulty")){
+			CCDirector.sharedDirector().replaceScene(difficultyScene);
 		}
 		
 		
 		
 				
+	}
+
+
+	public void setGameDifficulty(int Difficulty) {
+		
+//		GameLogic.getLogic.setDifficulty(Difficulty);
+		
+		
+	}
+
+
+	public void backScene() {
+		
+		CCDirector.sharedDirector().popScene();
+		
 	}
 
 }

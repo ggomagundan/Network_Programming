@@ -56,7 +56,7 @@ public class MenuLayer extends CCLayer {
 	
 	public void startCallback(Object sender){
 		
-		GameManager.getGame().ChangeScene("game");
+		GameManager.getGame().ChangeScene("difficulty");
 		
 	}
 	

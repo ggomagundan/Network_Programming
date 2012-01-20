@@ -30,7 +30,9 @@ public class TutorialLayer extends CCLayer{
 		
 		
 		for(String backgroundName: BasicConstants.TUTORIAL_IMG_LIST){
-			backgroundList.add(CCSprite.sprite(BasicConstants.TUTORIAL_IMG_LIST[length+1]));
+			CCSprite background =CCSprite.sprite(backgroundName); 
+			backgroundList.add(background);
+			addChild(background);
 			length++;
 		}
 		backButton = CCMenuItemImage.item(BasicConstants.BACK_BUTTON_IMG, BasicConstants.BACK_BUTTON_IMG, this, "backCallback");
@@ -51,17 +53,24 @@ public class TutorialLayer extends CCLayer{
 		
 		menu.setPosition(0, 0);
 		for(CCSprite background: backgroundList){
-			addChild(background);
+			
 			background.setOpacity(0);
 		}
-		addChild(menu);
 		checkButtonVisible();
+		addChild(menu);
+		
 		
 	}
 	
 	public void backCallback(Object sender){
 		
 		Log.d("PBS","pop");
+		depth = 0;
+		for(CCSprite background: backgroundList){
+			
+			background.setOpacity(0);
+		}
+		checkButtonVisible();
 		CCDirector.sharedDirector().popScene();
 	}
 	
@@ -108,5 +117,5 @@ public class TutorialLayer extends CCLayer{
 		
 	}
 
-
+	
 }

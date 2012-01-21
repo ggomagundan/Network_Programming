@@ -6,5 +6,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="lib" path="libs/cocos2d-android.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/AdMob_sdk-4.3.1.jar"/>
+	<classpathentry kind="lib" path="libs/cocos2d.jar"/>
+	<classpathentry kind="lib" path="libs/admob-sdk.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

@@ -54,13 +54,15 @@ public class GameManager {
 		tutorialScene = CCScene.node();
 		difficultyScene = CCScene.node();
 		
+		
+		
 		mainLayer = new MenuLayer();
 		gameLayer = new GameLayer();
 		storyLayer = new StoryLayer();
 		tutorialLayer = new TutorialLayer();
 		difficultyLayer =  new GameDifficultyLayer();
 		
-		mainScene.setScale(BasicConstants.scale);
+		//mainScene.setScale(BasicConstants.scale);
 		//gameLayer.setScale(BasicConstants.scale);
 		//storyLayer.setScale(BasicConstants.scale);
 		//tutorialLayer.setScale(BasicConstants.scale);

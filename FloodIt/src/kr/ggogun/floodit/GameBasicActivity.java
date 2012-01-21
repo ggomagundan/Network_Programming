@@ -4,23 +4,28 @@ import java.util.Calendar;
 
 import kr.ggogun.floodit.source.GameManager;
 
+import org.cocos2d.layers.CCLayer;
 import org.cocos2d.nodes.CCDirector;
 import org.cocos2d.opengl.CCGLSurfaceView;
 import org.cocos2d.sound.SoundEngine;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.Toast;
 
 import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
+
+
 
 public class GameBasicActivity extends Activity {
 
@@ -28,36 +33,54 @@ public class GameBasicActivity extends Activity {
 	
 	private GameManager gameManager;
 	
+	
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
-super.onCreate(savedInstanceState);
+    public void onCreate(Bundle savedInstanceState)  {
+		
+		super.onCreate(savedInstanceState);
 		
 		
 		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-		mGLSurfaceView = new CCGLSurfaceView(this);
-		setContentView(mGLSurfaceView);
-		
-//		mGLSurfaceView.setId(1);
-//		 int newID = mGLSurfaceView.getId();
-//
-//		AdView adView = new AdView(this, AdSize.BANNER, "a14f195582c3620");
-////         Lookup your LinearLayout assuming it¡¯s been given
-////         the attribute android:id="@+id/mainLayout"
-//        LinearLayout layout = (LinearLayout)findViewById(newID);
-//        // Add the adView to it
-//        layout.addView(adView);
-//       
-//        adView.loadAd(new AdRequest());
-
-
+	       
+        
+        
+        LinearLayout layout = new LinearLayout(this);
+        layout.setLayoutParams(new LinearLayout.LayoutParams(
+        		LinearLayout.LayoutParams.FILL_PARENT,
+        		LinearLayout.LayoutParams.FILL_PARENT,
+        		1.0f));
+        mGLSurfaceView = new CCGLSurfaceView(this);
+//        
+//		// setContentView(mGLSurfaceView);
+        mGLSurfaceView.setLayoutParams(new LinearLayout.LayoutParams(
+        		LinearLayout.LayoutParams.FILL_PARENT,
+        		LinearLayout.LayoutParams.FILL_PARENT,
+        		1.0f));
+//        layout.addView(mGLSurfaceView);
+        
+        
+        AdView adView = new AdView(this, AdSize.BANNER, "a14f195582c3620");
+        adView.setLayoutParams(new LinearLayout.LayoutParams(
+        		LinearLayout.LayoutParams.FILL_PARENT,
+        		LinearLayout.LayoutParams.FILL_PARENT,
+        		1.0f));
+       
+        adView.setBackgroundColor(Color.BLUE);
+        
+        setContentView(layout);
+        
+        adView.loadAd(new AdRequest());
+   
 
     }
 	
 	
+	
+	
+
 	
 	@Override
 	public void onStart() {
@@ -108,7 +131,8 @@ super.onCreate(savedInstanceState);
         finish();
 	}
 
-	
+		
+			
 	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/* If Pressing the Back key twice, shut down apps */																		//
@@ -161,6 +185,8 @@ super.onCreate(savedInstanceState);
 	};																															//
 																																//	
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////	
+
+	
 	
 	
 	

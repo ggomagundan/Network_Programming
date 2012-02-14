@@ -25,8 +25,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.ads.AdRequest;
+import com.google.ads.AdSize;
+import com.google.ads.AdView;
 
 public class RSSListActivity extends ListActivity {
         private ArrayList<RSSItem> itemlist = null;
@@ -37,9 +42,24 @@ public class RSSListActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        itemlist = new ArrayList<RSSItem>();
         
-        new RetrieveRSSFeeds().execute();
+        final String MY_AD_UNIT_ID = "a14f3aa59d9e0f2";
+        //Adview를 생성합니다.
+            AdView adView = new AdView(this, AdSize.BANNER, MY_AD_UNIT_ID);
+             
+             //미리 layout main.xml에 id 값을 입력해놓아야 겠죠.
+             LinearLayout layout = (LinearLayout)findViewById(R.id.mainLayout);
+             
+             //레이아웃에 adView를 추가합니다.
+             layout.addView(adView);
+             
+             //새로운 광고를 요청합니다.
+             adView.loadAd(new AdRequest());  
+        
+       
+        
+        
+        //new RetrieveRSSFeeds().execute();
     }
     
     @Override
@@ -81,8 +101,8 @@ public class RSSListActivity extends ListActivity {
         
                 @Override
                 protected Void doInBackground(Void... params) {
-                        retrieveRSSFeed("http://ggogun.tistory.com/rss",itemlist);
-                        
+                      //  retrieveRSSFeed("http://ggogun.tistory.com/rss",itemlist);
+                	retrieveRSSFeed("http://blog.mozilla.com/feed/",itemlist);
                         rssadaptor = new RSSListAdaptor(RSSListActivity.this, R.layout.rssitemview,itemlist);
                         
                         return null;
